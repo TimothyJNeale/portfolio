@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block content %}
+<main class="main main--contact">
+    <dl>
+        <div class="contact">
+            <dt>Email:</dt>
+            <dd class="contact__details">
+                <a class="contact__link" href="mailto:tim.neale@sixhills.ai">
+                    tim.neale [at] sixhills.ai
+                </a>
+            </dd>
+        </div>
+        <div class="contact">
+            <dt>GitHub:</dt>
+            <dd class="contact__details">
+                <a class="contact__link" href="https://github.com/TimothyJNeale">
+                    @TimothyJNeale
+                </a>
+            </dd>
+        </div>
+        <div class="contact">
+            <dt>Twitter / X:</dt>
+            <dd class="contact__details">
+                <a class="contact__link" href="https://x.com/timothyneale">
+                    @timothyneale
+                </a>
+            </dd>
+        </div>
+    </dl>
     
-</body>
-</html>
+</main>
+{% endblock %}
