@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+    <main class="main main--project">
+        <div>
+            <img
+                class="hero"
+                src="{{ url_for('static', filename=project['hero']) }}"
+                alt="A hand holding a pen, about to write something in a project planner."
+            />
+
+            <article class="project">
+                <article class="project__content">
+                    <h2 class="project__heading">{{ project['name'] }}</h2>
+
+                    <p>
+                        The Habit Tracker Project is an innovative tool designed to facilitate the effective monitoring and management of daily habits. By leveraging advanced data analytics and user-friendly interfaces, this project aims to help individuals develop and sustain positive habits while eliminating detrimental ones. The application offers a comprehensive set of features including customizable habit tracking, progress visualization through charts and graphs, and reminders to ensure consistency. Users can set specific goals, track their adherence to these goals over time, and receive insightful feedback on their progress, thereby fostering a greater sense of accountability and motivation.
+                    </p>
+                    <p>
+                        The project integrates modern technological solutions such as machine learning algorithms to provide personalized recommendations based on user behavior and preferences. These recommendations are designed to optimize habit formation strategies tailored to each user’s unique needs. Furthermore, the application supports cross-platform functionality, ensuring seamless accessibility on both mobile and desktop devices. By combining cutting-edge technology with behavioral science principles, the Habit Tracker Project aims to empower users to make meaningful, long-lasting changes in their lives, promoting overall well-being and productivity.
+                    </p>
+                </article>
+
+                <section>
+                    <article class="project__meta-group">
+                        <h3 class="project__heading project__heading--meta">Technologies used</h3>
+
+                        <ul class="technology-list">
+                            <li class="technology-list__item">Python</li>
+                            <li class="technology-list__item">HTML</li>
+                            <li class="technology-list__item">CSS</li>
+                        </ul>
+                    </article>
+
+                    <a class="cta" href="{{ project['prod'] }}">
+                        <img class="cta__icon" src="{{ url_for('static', filename='img/pointer.svg') }}">
+                        View in production
+                    </a>
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
